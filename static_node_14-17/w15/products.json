@@ -1,0 +1,62 @@
+[
+    {
+        "id": "1",
+        "name": "Laptop",
+        "price": 999.99,
+        "image": "/images/temp.jpg"
+    },
+    {
+        "id": "2",
+        "name": "Smartphone",
+        "price": 699.99,
+        "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300"
+    },
+    {
+        "id": "3",
+        "name": "Headphones",
+        "price": 89.99,
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300"
+    },
+    {
+        "id": "4",
+        "name": "Smartwatch",
+        "price": 199.99,
+        "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300"
+    },
+    {
+        "id": "5",
+        "name": "Tablet",
+        "price": 449.99,
+        "image": "https://images.unsplash.com/photo-1587825140708-6ce524b0f7c5?w=300"
+    },
+    {
+        "id": "6",
+        "name": "Wireless Mouse",
+        "price": 24.99,
+        "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=300"
+    },
+    {
+        "id": "7",
+        "name": "Mechanical Keyboard",
+        "price": 119.99,
+        "image": "https://images.unsplash.com/photo-1587202372775-98973f7c281b?w=300"
+    },
+    {
+        "id": "8",
+        "name": "Bluetooth Speaker",
+        "price": 59.99,
+        "image": "https://images.unsplash.com/photo-1585386959984-a415522dea4c?w=300"
+    },
+    {
+        "id": "9",
+        "name": "External Hard Drive",
+        "price": 89.99,
+        "image": "https://images.unsplash.com/photo-1618005198919-54c9b1ba1a0b?w=300"
+    },
+    {
+        "id": "10",
+        "name": "Gaming Chair",
+        "price": 249.99,
+        "image": "https://images.unsplash.com/photo-1603079342018-61c3d3b4e59b?w=300"
+    }
+]

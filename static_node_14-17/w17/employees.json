@@ -1,0 +1,34 @@
+[
+    {
+        "id": "1",
+        "name": "Swaraj Nalawade",
+        "designation": "Software Engineer",
+        "department": "Engineering",
+        "salary": 75000,
+        "profileImage": "/images/profile.jpg"
+    },
+    {
+        "id": "2",
+        "name": "Jane Smith",
+        "designation": "Product Manager",
+        "department": "Product",
+        "salary": 85000,
+        "profileImage": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300"
+    },
+    {
+        "id": "3",
+        "name": "Alice Johnson",
+        "designation": "Designer",
+        "department": "Design",
+        "salary": 65000,
+        "profileImage": "/images/profile.jpg"
+    },
+    {
+        "id": "4",
+        "name": "Bob Wilson",
+        "designation": "HR Specialist",
+        "department": "Human Resources",
+        "salary": 60000,
+        "profileImage": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300"
+    }
+]

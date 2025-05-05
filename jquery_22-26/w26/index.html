@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PICT B.E. Course Structure</title>
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- jQuery and jQuery Mobile JS -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        /* Basic to moderate custom CSS */
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.ui-header,
+.ui-footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+}
+
+.ui-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.ui-content {
+    padding: 15px;
+    background-color: #fff;
+    color: #333;
+}
+
+.ui-navbar a {
+    font-size: 14px;
+}
+
+h2, h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #333;
+    line-height: 1.6;
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+.ui-collapsible-heading-toggle {
+    background-color: #3498db !important;
+    color: white !important;
+}
+
+.ui-collapsible-content {
+    background-color: #ecf0f1 !important; /* Light gray background */
+    color: #2c3e50 !important; /* Darker text for visibility */
+    padding: 10px;
+}
+
+.subject {
+    margin-bottom: 10px;
+}
+
+.subject strong {
+    color: #2c3e50; /* Dark color for headings */
+    display: block;
+    margin-bottom: 4px;
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Page 1: Home -->
+    <div data-role="page" id="home" data-theme="b">
+        <div data-role="header">
+            <h1>PICT B.E.</h1>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" class="ui-btn-active" data-transition="slide">Home</a></li>
+                <li><a href="#course-structure" data-transition="slide">Course Structure</a></li>
+            </ul>
+        </div>
+        <div data-role="content">
+            <h2>Welcome to PICT B.E. Program</h2>
+            <p>Explore the Bachelor of Engineering (B.E.) course structure at Pune Institute of Computer Technology
+                (PICT). Our program is designed to provide a strong foundation in engineering and technology over four
+                years.</p>
+        </div>
+        <div data-role="footer">
+            <h4>PICT © 2025</h4>
+        </div>
+    </div>
+
+    <!-- Page 2: Course Structure -->
+    <div data-role="page" id="course-structure" data-theme="b">
+        <div data-role="header">
+            <h1>PICT B.E.</h1>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" data-transition="slide">Home</a></li>
+                <li><a href="#course-structure" class="ui-btn-active" data-transition="slide">Course Structure</a></li>
+            </ul>
+        </div>
+        <div data-role="content">
+            <h2>B.E. Course Structure</h2>
+            <div data-role="collapsible-set">
+                <!-- First Year (FE) -->
+                <div data-role="collapsible">
+                    <h3>First Year (FE)</h3>
+                    <div class="subject">
+                        <p><strong>Engineering Mathematics I:</strong> Covers calculus, differential equations, and
+                            linear algebra for engineering applications.</p>
+                    </div>
+                    <div class="subject">
+                        <p><strong>Engineering Physics:</strong> Introduces fundamental physics concepts like mechanics,
+                            optics, and thermodynamics.</p>
+                    </div>
+                    <div class="subject">
+                        <p><strong>Basic Electrical Engineering:</strong> Basics of electrical circuits, systems, and
+                            applications.</p>
+                    </div>
+                </div>
+                <!-- Second Year (SE) -->
+                <div data-role="collapsible">
+                    <h3>Second Year (SE)</h3>
+                    <div class="subject">
+                        <p><strong>Data Structures:</strong> Fundamentals of data structures like arrays, linked lists,
+                            stacks, and queues.</p>
+                    </div>
+                    <div class="subject">
+                        <p><strong>Discrete Mathematics:</strong> Topics like set theory, logic, and graph theory for
+                            computer science.</p>
+                    </div>
+                    <div class="subject">
+                        <p><strong>Digital Electronics:</strong> Introduction to digital circuits, logic gates, and
+                            microprocessors.</p>
+                    </div>
+                </div>
+                <!-- Third Year (TE) -->
+                <div data-role="collapsible">
+                    <h3>Third Year (TE)</h3>
+                    <div class="subject">
+                        <p><strong>Database Management Systems:</strong> Concepts of databases, SQL, and data modeling.
+                        </p>
+                    </div>
+                    <div class="subject">
+                        <p><strong>Operating Systems:</strong> Study of OS concepts like processes, memory management,
+                            and file systems.</p>
+                    </div>
+                    <div class="subject">
+                        <p><strong>Software Engineering:</strong> Principles of software development, testing, and
+                            project management.</p>
+                    </div>
+                </div>
+                <!-- Final Year (BE) -->
+                <div data-role="collapsible">
+                    <h3>Final Year (BE)</h3>
+                    <div class="subject">
+                        <p><strong>Machine Learning:</strong> Introduction to ML algorithms, models, and applications.
+                        </p>
+                    </div>
+                    <div class="subject">
+                        <p><strong>Cloud Computing:</strong> Concepts of cloud architecture, services, and deployment.
+                        </p>
+                    </div>
+                    <div class="subject">
+                        <p><strong>Project Work:</strong> A capstone project to apply engineering knowledge to a
+                            real-world problem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer">
+            <h4>PICT © 2025</h4>
+        </div>
+    </div>
+</body>
+
+</html>

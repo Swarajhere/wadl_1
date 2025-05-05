@@ -1,0 +1,52 @@
+{
+  "pune": {
+    "temperature": "30°C",
+    "humidity": "45%",
+    "condition": "Sunny"
+  },
+  "mumbai": {
+    "temperature": "32°C",
+    "humidity": "75%",
+    "condition": "Humid"
+  },
+  "delhi": {
+    "temperature": "35°C",
+    "humidity": "30%",
+    "condition": "Dry"
+  },
+  "bangalore": {
+    "temperature": "28°C",
+    "humidity": "60%",
+    "condition": "Cloudy"
+  },
+  "chennai": {
+    "temperature": "33°C",
+    "humidity": "80%",
+    "condition": "Hot and Humid"
+  },
+  "hyderabad": {
+    "temperature": "31°C",
+    "humidity": "50%",
+    "condition": "Partly Cloudy"
+  },
+  "ahmedabad": {
+    "temperature": "36°C",
+    "humidity": "25%",
+    "condition": "Dry Heat"
+  },
+  "jaipur": {
+    "temperature": "34°C",
+    "humidity": "20%",
+    "condition": "Sunny"
+  },
+  "kolkata": {
+    "temperature": "30°C",
+    "humidity": "85%",
+    "condition": "Rainy"
+  },
+  "nagpur": {
+    "temperature": "33°C",
+    "humidity": "40%",
+    "condition": "Clear"
+  }
+}

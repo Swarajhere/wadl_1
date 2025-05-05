@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Student Marks Management</h1>
+    </header>
+    <main>
+        <section class="controls">
+            <h2>Actions</h2>
+            <div class="button-group">
+                <button onclick="insertData()">Insert Data</button>
+                <button onclick="showAll()">Show All Students</button>
+                <button onclick="showDSBDA()">DSBDA > 20</button>
+                <button onclick="showAll25()">All Subjects > 25</button>
+                <button onclick="showLowMarks()">WAD & CNS < 40</button>
+            </div>
+            <div class="input-group">
+                <input id="rollNo" type="number" placeholder="Enter Roll No">
+                <button onclick="updateMarks()">Update Marks (+10)</button>
+                <button onclick="deleteStudent()">Delete Student</button>
+            </div>
+        </section>
+        <section class="results">
+            <h2>Results (Total: <span id="totalCount">0</span>)</h2>
+            <div id="result"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

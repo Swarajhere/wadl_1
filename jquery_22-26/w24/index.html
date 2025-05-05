@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Reviews</title>
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- jQuery and jQuery Mobile JS -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        /* Basic to moderate custom CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .ui-header,
+        .ui-footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+        }
+
+        .ui-footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .ui-content {
+            padding: 15px;
+            background-color: #fff;
+        }
+
+        .ui-navbar a {
+            font-size: 14px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.5;
+            margin: 5px 0;
+        }
+
+        .ui-collapsible-heading-toggle {
+            background-color: #3498db !important;
+            color: white !important;
+        }
+
+        .ui-collapsible-content {
+            background-color: #ecf0f1;
+            color: #333;
+            padding: 10px;
+        }
+
+        .movie-poster {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Page 1: Home -->
+    <div data-role="page" id="home" data-theme="b">
+        <div data-role="header">
+            <h1>Movie Reviews</h1>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" class="ui-btn-active" data-transition="slide">Home</a></li>
+                <li><a href="#movies" data-transition="slide">Movies</a></li>
+            </ul>
+        </div>
+        <div data-role="content">
+            <h2>Welcome to Movie Reviews</h2>
+            <p>Discover reviews of some popular movies, including their genres, summaries, and more. Navigate to the
+                Movies page to explore!</p>
+        </div>
+        <div data-role="footer">
+            <h4>Movie Reviews © 2025</h4>
+        </div>
+    </div>
+
+    <!-- Page 2: Movies -->
+    <div data-role="page" id="movies" data-theme="b">
+        <div data-role="header">
+            <h1>Movie Reviews</h1>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" data-transition="slide">Home</a></li>
+                <li><a href="#movies" class="ui-btn-active" data-transition="slide">Movies</a></li>
+            </ul>
+        </div>
+        <div data-role="content">
+            <h2>Movie Reviews</h2>
+            <!-- Inside the <div data-role="collapsible-set">, replace its content with the updated list below -->
+            <div data-role="collapsible-set">
+                <!-- Movie 1: Inception -->
+                <div data-role="collapsible">
+                    <h3>Inception (2010)</h3>
+                    <p><strong>Genre:</strong> Sci-Fi, Thriller</p>
+                    <p><strong>Summary:</strong> A thief who steals corporate secrets through dream infiltration is given the task
+                        of planting an idea into the mind of a CEO.</p>
+                    <p><strong>Review:</strong> A mind-bending masterpiece with stunning visuals and a gripping narrative. Nolan's
+                        direction keeps you on the edge of your seat!</p>
+                    <img src="https://images.unsplash.com/photo-1536440136628-390146b341e3?w=300" alt="Inception Poster"
+                        class="movie-poster">
+                </div>
+            
+                <!-- Movie 2: Dune -->
+                <div data-role="collapsible">
+                    <h3>Dune (2021)</h3>
+                    <p><strong>Genre:</strong> Sci-Fi, Adventure</p>
+                    <p><strong>Summary:</strong> Paul Atreides, a gifted young man, must travel to the dangerous desert planet
+                        Arrakis to ensure the future of his people.</p>
+                    <p><strong>Review:</strong> Visually stunning with a powerful score. Villeneuve masterfully brings the epic saga
+                        to life with a grounded and immersive narrative.</p>
+                    <img src="https://images.unsplash.com/photo-1630171271052-81685e4ecf53?w=300" alt="Dune Poster"
+                        class="movie-poster">
+                </div>
+            
+                <!-- Movie 3: The Dark Knight -->
+                <div data-role="collapsible">
+                    <h3>The Dark Knight (2008)</h3>
+                    <p><strong>Genre:</strong> Action, Crime</p>
+                    <p><strong>Summary:</strong> Batman faces the Joker, a criminal mastermind who plunges Gotham into chaos,
+                        forcing Batman to confront his own limits.</p>
+                    <p><strong>Review:</strong> Ledger's Joker is iconic, and the film balances action with deep moral questions. A
+                        superhero movie like no other.</p>
+                    <img src="https://images.unsplash.com/photo-1531251445707-1f000e1e1d53?w=300" alt="The Dark Knight Poster"
+                        class="movie-poster">
+                </div>
+            
+                <!-- Movie 4: La La Land -->
+                <div data-role="collapsible">
+                    <h3>La La Land (2016)</h3>
+                    <p><strong>Genre:</strong> Musical, Romance</p>
+                    <p><strong>Summary:</strong> A musician and an aspiring actress fall in love in Los Angeles while pursuing their
+                        dreams, facing the challenges of ambition and love.</p>
+                    <p><strong>Review:</strong> A beautifully shot musical with heartfelt performances by Gosling and Stone. The
+                        ending is both bittersweet and unforgettable.</p>
+                    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=300" alt="La La Land Poster"
+                        class="movie-poster">
+                </div>
+            
+                <!-- Movie 5: Fight Club -->
+                <div data-role="collapsible">
+                    <h3>Fight Club (1999)</h3>
+                    <p><strong>Genre:</strong> Drama, Psychological Thriller</p>
+                    <p><strong>Summary:</strong> An insomniac office worker and a soap salesman form an underground fight club that
+                        evolves into something far more sinister.</p>
+                    <p><strong>Review:</strong> Dark, provocative, and brilliantly acted. Fight Club challenges societal norms with
+                        a twist that remains one of cinema's most iconic.</p>
+                    <img src="https://images.unsplash.com/photo-1581905764498-8f9f4b410d90?w=300" alt="Fight Club Poster"
+                        class="movie-poster">
+                </div>
+            
+                <!-- Movie 6: Interstellar -->
+                <div data-role="collapsible">
+                    <h3>Interstellar (2014)</h3>
+                    <p><strong>Genre:</strong> Sci-Fi, Drama</p>
+                    <p><strong>Summary:</strong> A group of explorers travel through a wormhole in space in an attempt to ensure
+                        humanity's survival.</p>
+                    <p><strong>Review:</strong> An emotional and intellectual journey through space and time, powered by Nolan's
+                        direction and Zimmer's unforgettable score.</p>
+                    <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=300" alt="Interstellar Poster"
+                        class="movie-poster">
+                </div>
+            </div>
+
+        </div>
+        <div data-role="footer">
+            <h4>Movie Reviews © 2025</h4>
+        </div>
+    </div>
+</body>
+
+</html>

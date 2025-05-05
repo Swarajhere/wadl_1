@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swaraj Nalawade Portfolio</title>
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- jQuery and jQuery Mobile JS -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        /* Basic to moderate custom CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+    
+        .ui-header,
+        .ui-footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+        }
+    
+        .ui-footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    
+        .ui-content {
+            padding: 15px;
+            background-color: #fff;
+        }
+    
+        .ui-navbar a {
+            font-size: 14px;
+        }
+    
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+    
+        p {
+            color: #555;
+            line-height: 1.5;
+            margin: 5px 0;
+        }
+    
+        .ui-collapsible-heading-toggle {
+            background-color: #3498db !important;
+            color: white !important;
+        }
+    
+        .ui-collapsible-content {
+            background-color: #ecf0f1 !important;
+            /* Ensure light gray background */
+            color: #fff !important;
+            /* Change text color to white for better visibility */
+            padding: 10px;
+        }
+    
+        .contact-info {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Page 1: About Me -->
+    <div data-role="page" id="about" data-theme="b">
+        <div data-role="header">
+            <h1>Swaraj Nalawade</h1>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#about" class="ui-btn-active" data-transition="slide">About Me</a></li>
+                <li><a href="#projects" data-transition="slide">Projects</a></li>
+                <li><a href="#skills" data-transition="slide">Skills</a></li>
+                <li><a href="#contact" data-transition="slide">Contact</a></li>
+            </ul>
+        </div>
+        <div data-role="content">
+            <h2>About Me</h2>
+            <p>I am Swaraj Nalawade, an Information Technology engineering student at PICT, Pune (2022–2026), with a
+                CGPA of 9.2. I am passionate about software development and enjoy solving real-world problems through
+                code. My interests lie in web development, backend systems, and data structures.</p>
+        </div>
+        <div data-role="footer">
+            <h4>Swaraj Nalawade © 2025</h4>
+        </div>
+    </div>
+
+    <!-- Page 2: Projects -->
+    <div data-role="page" id="projects" data-theme="b">
+        <div data-role="header">
+            <h1>Swaraj Nalawade</h1>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#about" data-transition="slide">About Me</a></li>
+                <li><a href="#projects" class="ui-btn-active" data-transition="slide">Projects</a></li>
+                <li><a href="#skills" data-transition="slide">Skills</a></li>
+                <li><a href="#contact" data-transition="slide">Contact</a></li>
+            </ul>
+        </div>
+        <div data-role="content">
+            <h2>My Projects</h2>
+            <div data-role="collapsible-set">
+                <div data-role="collapsible">
+                    <h3>Ride Buddy</h3>
+                    <p>A web application developed using HTML, CSS, JavaScript, PostgreSQL, Node.js, and Express.js to
+                        enable intercity carpooling for users.</p>
+                </div>
+                <div data-role="collapsible">
+                    <h3>Rescue Bites</h3>
+                    <p>A PostgreSQL-based database project using ReactJS where restaurants can donate leftover food,
+                        helping reduce food waste and aid those in need.</p>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer">
+            <h4>Swaraj Nalawade © 2025</h4>
+        </div>
+    </div>
+
+    <!-- Page 3: Skills -->
+    <div data-role="page" id="skills" data-theme="b">
+        <div data-role="header">
+            <h1>Swaraj Nalawade</h1>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#about" data-transition="slide">About Me</a></li>
+                <li><a href="#projects" data-transition="slide">Projects</a></li>
+                <li><a href="#skills" class="ui-btn-active" data-transition="slide">Skills</a></li>
+                <li><a href="#contact" data-transition="slide">Contact</a></li>
+            </ul>
+        </div>
+        <div data-role="content">
+            <h2>My Skills</h2>
+            <div data-role="collapsible-set">
+                <div data-role="collapsible">
+                    <h3>Programming Languages</h3>
+                    <p>C++, Python, Java</p>
+                </div>
+                <div data-role="collapsible">
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript, ReactJS, Node.js</p>
+                </div>
+                <div data-role="collapsible">
+                    <h3>Tools & Applications</h3>
+                    <p>Git, Visual Studio, IntelliJ, VirtualBox, Jupyter</p>
+                </div>
+                <div data-role="collapsible">
+                    <h3>Databases</h3>
+                    <p>MySQL, PostgreSQL</p>
+                </div>
+                <div data-role="collapsible">
+                    <h3>Libraries & Frameworks</h3>
+                    <p>Pandas, Numpy, Matplotlib, Scikit-learn</p>
+                </div>
+                <div data-role="collapsible">
+                    <h3>CS Fundamentals</h3>
+                    <p>DSA, OOP, DBMS, ML</p>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer">
+            <h4>Swaraj Nalawade © 2025</h4>
+        </div>
+    </div>
+
+    <!-- Page 4: Contact Info -->
+    <div data-role="page" id="contact" data-theme="b">
+        <div data-role="header">
+            <h1>Swaraj Nalawade</h1>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#about" data-transition="slide">About Me</a></li>
+                <li><a href="#projects" data-transition="slide">Projects</a></li>
+                <li><a href="#skills" data-transition="slide">Skills</a></li>
+                <li><a href="#contact" class="ui-btn-active" data-transition="slide">Contact</a></li>
+            </ul>
+        </div>
+        <div data-role="content">
+            <h2>Contact Info</h2>
+            <p class="contact-info"><strong>Email:</strong> swaraj.nalawade04@gmail.com</p>
+            <p class="contact-info"><strong>Phone:</strong> +91 99600 20707</p>
+            <p class="contact-info"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/swarajnalawade04/"
+                    target="_blank">linkedin.com/in/swarajnalawade04</a></p>
+            <p class="contact-info"><strong>GitHub:</strong> <a href="https://github.com/swarajhere"
+                    target="_blank">github.com/swarajhere</a></p>
+        </div>
+        <div data-role="footer">
+            <h4>Swaraj Nalawade © 2025</h4>
+        </div>
+    </div>
+</body>
+
+</html>

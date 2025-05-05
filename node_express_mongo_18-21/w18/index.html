@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Database</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Music Database</h1>
+    </header>
+    <main>
+        <!-- Form for adding songs -->
+        <section id="songForm">
+            <h2>Add Song</h2>
+            <input type="hidden" id="songId">
+            <input type="text" id="songname" placeholder="Song Name" required>
+            <input type="text" id="film" placeholder="Film" required>
+            <input type="text" id="musicDirector" placeholder="Music Director" required>
+            <input type="text" id="singer" placeholder="Singer" required>
+            <input type="text" id="actor" placeholder="Actor">
+            <input type="text" id="actress" placeholder="Actress">
+            <button onclick="addSong()">Add Song</button>
+            <button onclick="resetForm()" id="resetBtn">Reset</button>
+        </section>
+        <!-- Filter section -->
+        <section id="filterForm">
+            <h2>Filter Songs</h2>
+            <input type="text" id="filterMusicDirector" placeholder="Music Director">
+            <input type="text" id="filterSinger" placeholder="Singer">
+            <input type="text" id="filterFilm" placeholder="Film">
+            <button onclick="filterSongs()">Filter</button>
+        </section>
+        <!-- Table to display songs -->
+        <section id="songList">
+            <h2>Song Details (Total: <span id="totalCount">0</span>)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Song Name</th>
+                        <th>Film</th>
+                        <th>Music Director</th>
+                        <th>Singer</th>
+                        <th>Actor</th>
+                        <th>Actress</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="songTableBody"></tbody>
+            </table>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

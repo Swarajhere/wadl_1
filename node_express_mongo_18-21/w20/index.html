@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Employee Management</h1>
+    </header>
+    <main>
+        <!-- Form for adding/updating employees -->
+        <section id="employeeForm">
+            <h2>Add/Update Employee</h2>
+            <input type="hidden" id="employeeId">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="department" placeholder="Department" required>
+            <input type="text" id="designation" placeholder="Designation" required>
+            <input type="number" id="salary" placeholder="Salary" required>
+            <input type="date" id="joiningDate" required>
+            <button onclick="saveEmployee()">Save Employee</button>
+            <button onclick="resetForm()" id="resetBtn">Reset</button>
+        </section>
+        <!-- Table to display employees -->
+        <section id="employeeList">
+            <h2>Employee Records</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Designation</th>
+                        <th>Salary</th>
+                        <th>Joining Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="employeeTableBody"></tbody>
+            </table>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

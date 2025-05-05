@@ -1,0 +1,65 @@
+body {
+    background: #e9ebee;
+}
+
+.fb-header {
+    background: #3b5998;
+}
+
+.fb-header .container {
+    max-width: 1200px;
+}
+
+.fb-logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.fb-login-form {
+    width: 570px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.fb-login-form .d-flex:nth-child(1),
+.fb-login-form .d-flex:nth-child(2) {
+    width: 200px;
+}
+
+.fb-login-form input[type="text"],
+.fb-login-form input[type="password"] {
+    min-width: 140px;
+}
+
+.fb-main-content {
+    min-height: 80vh;
+}
+
+.fb-main-content h4 {
+    color: #222;
+}
+
+.fb-main-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.bg-white {
+    background: #fff !important;
+}
+
+.btn-success {
+    background-color: #4CAF50 !important;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #45a049 !important;
+}
+
+.text-primary {
+    color: #3b5998 !important;
+}

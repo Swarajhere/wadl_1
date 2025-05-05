@@ -1,0 +1,22 @@
+[
+    {
+        "id": "1",
+        "name": "John Doe",
+        "email": "john@example.com",
+        "mobile": "1234567890",
+        "dob": "1990-01-01",
+        "city": "Mumbai",
+        "address": "123 Main St",
+        "username": "johndoe"
+    },
+    {
+        "id": "2",
+        "name": "Jane Smith",
+        "email": "jane@example.com",
+        "mobile": "0987654321",
+        "dob": "1985-05-15",
+        "city": "Delhi",
+        "address": "456 Park Ave",
+        "username": "janesmith"
+    }
+]
