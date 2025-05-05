@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mugs - E-commerce</title>
+    <link href="bootstrap-5.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Ensure product images are consistent */
+        .card-img-top {
+            height: 200px;
+            object-fit: contain;
+        }
+
+        /* Style for filter section container */
+        .filter-section {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        /* Custom badge for bestsellers */
+        .badge-custom {
+            background-color: #f8e1b4;
+            color: #000;
+            font-size: 0.8rem;
+        }
+
+        /* Badge for new items */
+        .badge-new {
+            background-color: #007bff;
+            color: #fff;
+            font-size: 0.8rem;
+        }
+
+        /* Discount price styling */
+        .price-discount {
+            color: green;
+            font-size: 0.9rem;
+        }
+
+        /* Ensure all cards in a row have the same height */
+        .product-card .card {
+            height: 100%;
+        }
+
+        /* Use flexbox to make card content stretch and align */
+        .product-card .card-body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Push the last paragraph to the bottom of the card */
+        .product-card .card-body p:last-child {
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container my-4">
+        <h1>Mugs</h1>
+        <p class="text-muted">Mugs and glasses sell great gifts for friends and loved ones on special occasions. Choose
+            from many different sizes and styles to sell online.</p>
+
+        <div class="row">
+            <!-- Filter Section -->
+            <div class="col-md-3 mb-4">
+                <div class="filter-section">
+                    <h6>TARGET MARKET</h6>
+                    <div class="form-check">
+                        <input class="form-check-input target-market" type="checkbox" value="USA" id="usa">
+                        <label class="form-check-label" for="usa">USA</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input target-market" type="checkbox" value="Canada" id="canada">
+                        <label class="form-check-label" for="canada">Canada</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input target-market" type="checkbox" value="United Kingdom" id="uk">
+                        <label class="form-check-label" for="uk">United Kingdom</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input target-market" type="checkbox" value="Europe" id="europe">
+                        <label class="form-check-label" for="europe">Europe</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input target-market" type="checkbox" value="Australia/NZ"
+                            id="australia">
+                        <label class="form-check-label" for="australia">Australia/NZ</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input target-market" type="checkbox" value="China" id="china">
+                        <label class="form-check-label" for="china">China</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input target-market" type="checkbox" value="Other" id="other">
+                        <label class="form-check-label" for="other">Other</label>
+                    </div>
+
+                    <h6 class="mt-3">PRINT AREA</h6>
+                    <div class="form-check">
+                        <input class="form-check-input print-area" type="checkbox" value="All areas" id="all-areas">
+                        <label class="form-check-label" for="all-areas">All areas</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input print-area" type="checkbox" value="All over print" id="all-over">
+                        <label class="form-check-label" for="all-over">All over print</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input print-area" type="checkbox" value="Front side" id="front-side">
+                        <label class="form-check-label" for="front-side">Front side</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input print-area" type="checkbox" value="Wraparound exterior"
+                            id="wraparound">
+                        <label class="form-check-label" for="wraparound">Wraparound exterior</label>
+                    </div>
+
+                    <h6 class="mt-3">PRINT PROVIDERS</h6>
+                    <div class="form-check">
+                        <input class="form-check-input print-provider" type="checkbox" value="ArtsAdd" id="artsadd">
+                        <label class="form-check-label" for="artsadd">ArtsAdd</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input print-provider" type="checkbox" value="Colorway" id="colorway">
+                        <label class="form-check-label" for="colorway">Colorway</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input print-provider" type="checkbox" value="District Photo"
+                            id="district-photo">
+                        <label class="form-check-label" for="district-photo">District Photo</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input print-provider" type="checkbox" value="Printify" id="printify">
+                        <label class="form-check-label" for="printify">Printify</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="col-md-9">
+                <!-- Sorting dropdown -->
+                <div class="d-flex justify-content-end mb-3">
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button" id="sortDropdown"
+                            data-bs-toggle="dropdown">
+                            Sort by Popularity
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+                            <li><a class="dropdown-item sort-option" href="#" data-sort="popularity">Popularity</a></li>
+                            <li><a class="dropdown-item sort-option" href="#" data-sort="price-low">Price: Low to
+                                    High</a></li>
+                            <li><a class="dropdown-item sort-option" href="#" data-sort="price-high">Price: High to
+                                    Low</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" id="product-grid">
+                    <div class="col product-card" data-target-markets="USA,Canada" data-print-area="All areas"
+                        data-print-provider="Printify" data-price="4.40">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/200x200?text=Ceramic+Mug+11oz" class="card-img-top"
+                                alt="Ceramic Mug 11oz">
+                            <div class="card-body">
+                                <span class="badge badge-custom">Bestseller</span>
+                                <h6 class="card-title mt-2">Ceramic Mug 11oz</h6>
+                                <p class="card-text text-muted">By Generic brand</p>
+                                <p class="card-text">From USD 4.40 <br> <span class="price-discount">From USD 3.39 with
+                                        Printify Premium</span></p>
+                                <p class="card-text text-muted">1 size • District Photo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col product-card" data-target-markets="USA,Canada" data-print-area="All areas"
+                        data-print-provider="Printify" data-price="5.52">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/200x200?text=Accent+Coffee+Mug" class="card-img-top"
+                                alt="Accent Coffee Mug">
+                            <div class="card-body">
+                                <span class="badge badge-custom">Bestseller</span>
+                                <h6 class="card-title mt-2">Accent Coffee Mug, 11oz</h6>
+                                <p class="card-text text-muted">By Generic brand</p>
+                                <p class="card-text">From USD 5.52 <br> <span class="price-discount">From USD 4.25 with
+                                        Printify Premium</span></p>
+                                <p class="card-text text-muted">1 size • 5 colors • District Photo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col product-card" data-target-markets="USA,Canada" data-print-area="All areas"
+                        data-print-provider="Printify" data-price="5.66">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/200x200?text=Ceramic+Mug+15oz" class="card-img-top"
+                                alt="Ceramic Mug 15oz">
+                            <div class="card-body">
+                                <h6 class="card-title">Ceramic Mug 15oz</h6>
+                                <p class="card-text text-muted">By Generic brand</p>
+                                <p class="card-text">From USD 5.66 <br> <span class="price-discount">From USD 4.36 with
+                                        Printify Premium</span></p>
+                                <p class="card-text text-muted">1 size • District Photo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col product-card" data-target-markets="USA,Canada" data-print-area="All areas"
+                        data-print-provider="Orca Coatings" data-price="6.88">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/200x200?text=White+Ceramic+Mug" class="card-img-top"
+                                alt="White Ceramic Mug">
+                            <div class="card-body">
+                                <h6 class="card-title">White Ceramic Mug</h6>
+                                <p class="card-text text-muted">By Orca Coatings</p>
+                                <p class="card-text">From USD 6.88 <br> <span class="price-discount">From USD 5.30 with
+                                        Printify Premium</span></p>
+                                <p class="card-text text-muted">2 sizes • MyLocker</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col product-card" data-target-markets="USA,Canada" data-print-area="All areas"
+                        data-print-provider="Generic brand" data-price="5.84">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/200x200?text=Mug+11oz" class="card-img-top"
+                                alt="Mug 11oz">
+                            <div class="card-body">
+                                <h6 class="card-title">Mug 11oz</h6>
+                                <p class="card-text text-muted">By Generic brand</p>
+                                <p class="card-text">From USD 5.84 <br> <span class="price-discount">From USD 4.49 with
+                                        Printify Premium</span></p>
+                                <p class="card-text text-muted">1 size • 2 print providers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col product-card" data-target-markets="USA,Canada" data-print-area="All areas"
+                        data-print-provider="Printify" data-price="5.84">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/200x200?text=Ceramic+Mug+11oz+New"
+                                class="card-img-top" alt="Ceramic Mug 11oz">
+                            <div class="card-body">
+                                <span class="badge badge-new">New</span>
+                                <h6 class="card-title mt-2">Ceramic Mug 11oz</h6>
+                                <p class="card-text text-muted">By Generic brand</p>
+                                <p class="card-text">From USD 5.84 <br> <span class="price-discount">From USD 4.49 with
+                                        Printify Premium</span></p>
+                                <p class="card-text text-muted">1 size • District Photo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col product-card" data-target-markets="USA,Canada" data-print-area="All areas"
+                        data-print-provider="Printify" data-price="5.92">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/200x200?text=Ceramic+Mug+15oz+New"
+                                class="card-img-top" alt="Ceramic Mug 15oz">
+                            <div class="card-body">
+                                <span class="badge badge-new">New</span>
+                                <h6 class="card-title mt-2">Ceramic Mug 15oz</h6>
+                                <p class="card-text text-muted">By Generic brand</p>
+                                <p class="card-text">From USD 5.92 <br> <span class="price-discount">From USD 4.56 with
+                                        Printify Premium</span></p>
+                                <p class="card-text text-muted">1 size • District Photo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col product-card" data-target-markets="USA,Canada" data-print-area="All areas"
+                        data-print-provider="Orca Coatings" data-price="6.88">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/200x200?text=White+Ceramic+Mug+2" class="card-img-top"
+                                alt="White Ceramic Mug">
+                            <div class="card-body">
+                                <h6 class="card-title">White Ceramic Mug</h6>
+                                <p class="card-text text-muted">By Orca Coatings</p>
+                                <p class="card-text">From USD 6.88 <br> <span class="price-discount">From USD 5.30 with
+                                        Printify Premium</span></p>
+                                <p class="card-text text-muted">2 sizes • MyLocker</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Select DOM elements for filtering and sorting
+        const productCards = document.querySelectorAll('.product-card');
+        const targetMarketFilters = document.querySelectorAll('.target-market');
+        const printAreaFilters = document.querySelectorAll('.print-area');
+        const printProviderFilters = document.querySelectorAll('.print-provider');
+        const sortOptions = document.querySelectorAll('.sort-option');
+        const sortDropdown = document.getElementById('sortDropdown');
+
+        // Filter products based on selected checkboxes
+        function filterProducts() {
+            const selectedMarkets = Array.from(targetMarketFilters)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => checkbox.value);
+            const selectedPrintAreas = Array.from(printAreaFilters)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => checkbox.value);
+            const selectedProviders = Array.from(printProviderFilters)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => checkbox.value);
+
+            productCards.forEach(card => {
+                const markets = card.dataset.targetMarkets.split(',');
+                const printArea = card.dataset.printArea;
+                const provider = card.dataset.printProvider;
+
+                const marketMatch = selectedMarkets.length === 0 || selectedMarkets.some(market => markets.includes(market));
+                const printAreaMatch = selectedPrintAreas.length === 0 || selectedPrintAreas.includes(printArea);
+                const providerMatch = selectedProviders.length === 0 || selectedProviders.includes(provider);
+
+                card.style.display = marketMatch && printAreaMatch && providerMatch ? '' : 'none';
+            });
+        }
+
+        // Sort products based on selected sort option
+        function sortProducts(sortType) {
+            const sortedCards = Array.from(productCards).sort((a, b) => {
+                if (sortType === 'price-low') {
+                    return parseFloat(a.dataset.price) - parseFloat(b.dataset.price);
+                } else if (sortType === 'price-high') {
+                    return parseFloat(b.dataset.price) - parseFloat(a.dataset.price);
+                }
+                return 0; // Default (popularity) - no sorting
+            });
+
+            const productGrid = document.getElementById('product-grid');
+            productGrid.innerHTML = '';
+            sortedCards.forEach(card => productGrid.appendChild(card));
+
+            filterProducts(); // Reapply filters after sorting
+        }
+
+        // Add event listeners for filter checkboxes
+        targetMarketFilters.forEach(filter => filter.addEventListener('change', filterProducts));
+        printAreaFilters.forEach(filter => filter.addEventListener('change', filterProducts));
+        printProviderFilters.forEach(filter => filter.addEventListener('change', filterProducts));
+
+        // Add event listeners for sort options
+        sortOptions.forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.preventDefault();
+                const sortType = option.dataset.sort;
+                sortDropdown.textContent = option.textContent;
+                sortProducts(sortType);
+            });
+        });
+
+        filterProducts(); // Initial filter
+    </script>
+</body>
+
+</html>
