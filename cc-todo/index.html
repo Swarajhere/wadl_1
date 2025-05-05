@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Simple To-Do List</title>
+    <style>
+        html,
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #task-list {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            width: 300px;
+        }
+
+        input,
+        button {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .task {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Simple To-Do List</h2>
+    <input type="text" id="task" placeholder="Enter a task" />
+    <button onclick="addTask()">Add Task</button>
+
+    <div id="task-list"></div>
+
+    <script>
+        // Simulated GET using XMLHttpRequest + setTimeout
+        function getTasks() {
+            return new Promise((resolve) => {
+                const xhr = new XMLHttpRequest();
+                xhr.onload = function () {
+                    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+                    resolve(tasks);
+                };
+                xhr.status = 200;
+                xhr.onload(); // manually trigger since we have no real server
+                //simulate async delay
+                // setTimeout(() => {
+                //   xhr.status = 200;
+                //   xhr.onload(); // manually trigger since we have no real server
+                // }, 200);
+            });
+        }
+
+        // Simulated POST using XMLHttpRequest + setTimeout
+        function saveTasks(tasks) {
+            return new Promise((resolve) => {
+                const xhr = new XMLHttpRequest();
+                xhr.onload = function () {
+                    localStorage.setItem("tasks", JSON.stringify(tasks));
+                    resolve();
+                };
+                xhr.status = 200;
+                xhr.onload(); // manually trigger
+                // simulate async delay
+                // setTimeout(() => {
+                //   xhr.status = 200;
+                //   xhr.onload(); // manually trigger
+                // }, 200);
+            });
+        }
+
+        async function loadTasks() {
+            const taskListDiv = document.getElementById("task-list");
+            const tasks = await getTasks();
+            taskListDiv.innerHTML = "";
+            tasks.forEach((task, index) => {
+                taskListDiv.innerHTML += `
+          <div class="task">
+            <span>${task}</span>
+            <button onclick="deleteTask(${index})">Delete</button>
+            <button onclick="updateTask(${index})">Update</button>
+          </div>
+        `;
+            });
+        }
+
+        async function addTask() {
+            const taskInput = document.getElementById("task");
+            const taskText = taskInput.value.trim();
+
+            if (taskText === "") {
+                alert("Please enter a task.");
+                return;
+            }
+
+            const tasks = await getTasks();
+            tasks.push(taskText);
+            await saveTasks(tasks);
+
+            loadTasks();
+            taskInput.value = "";
+        }
+
+        async function deleteTask(index) {
+            const tasks = await getTasks();
+            tasks.splice(index, 1);
+            await saveTasks(tasks);
+            loadTasks();
+        }
+
+        async function updateTask(index) {
+            const tasks = await getTasks();
+            const newTaskText = prompt("Update your task:", tasks[index]);
+
+            if (newTaskText && newTaskText.trim() !== "") {
+                tasks[index] = newTaskText;
+                await saveTasks(tasks);
+                loadTasks();
+            }
+        }
+
+        window.onload = loadTasks;
+    </script>
+</body>
+
+</html>
